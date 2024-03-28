@@ -1,0 +1,19 @@
+This API accepts requests for ecological data at coordinates within a temporal range specified by the "startDate" and "endDate" parameters
+
+Base URL: https://modis.ornl.gov/rst/api/v1/
+
+Date parameters the following format: AYYYYDDD
+Coordinates are in decimal degrees
+
+The product id for net primary productivity (NPP) is MOD17A3HGF
+The band name for the NPP data is Npp_500m
+
+The units for the Npp_500m data that is returned is kilograms per meter squared per year with a 0.0001 offset.
+
+Always set the "kmAboveBelow" and "kmLeftRight" parameters to 0.
+
+The following is an example of a URL that gets data for NPP at a specific latitude and longitude between 2002 and 2005:
+
+https://modis.ornl.gov/rst/api/v1/MOD17A3HGF/subset?latitude=34.334459834357986&longitude=-118.05277394802319&product=MOD17A3HGF&startDate=A2002001&endDate=A2005365&kmAboveBelow=0&kmLeftRight=0
+
+

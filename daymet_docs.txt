@@ -1,0 +1,9 @@
+This API accepts requests for daily meteorological variables (vars) at a lat/lon point for start and stop dates with the following format YYYY-MM-DD.
+
+Example of valid request url for a point:
+
+https://daymet.ornl.gov/single-pixel/api/data?lat=35.9621&lon=-84.2916&vars=dayl,prcp,srad,swe,tmax,tmin,vp&start=1990-01-01&end=2006-12-31
+
+vars that are accepted: 
+
+tmax (degrees C): Daily maximum 2-meter air temperature. tmin (degrees C): Daily minimum 2-meter air temperature. dayl (s/day): Duration of the daylight period for the day. This calculation is based on the period of the day during which the sun is above a hypothetical flat horizon. prcp (mm/day): Daily total precipitation, sum of all forms converted to water-equivalent. srad (W/m^2): Incident shortwave radiation flux density, taken as an average over the daylight period of the day. NOTE : Daily Total Radiation (MJ/m^2/day) can be calculated: ((srad (W/m^2) * dayl (s/day)) / l,000,000) swe (kg/m^2): Snow water equivalent. The amount of water contained within the snowpack. vp (Pa): Water Vapor Pressure. Daily average partial pressure of water vapor.
